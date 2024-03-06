@@ -37,7 +37,7 @@ const getPokemon = async (id) => {
 const createPokemonBox = (pokemon) => {
   const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
   const id = pokemon.id.toString().padStart(3, "0");
-  const weigth = pokemon.weigth;
+  const weight = pokemon.weight;
   const type = pokemon.types[0].type.name;
   const color = colors[type];
 
@@ -53,7 +53,7 @@ const createPokemonBox = (pokemon) => {
 />
 <h3 class="poke-name">${name}</h3>
 <p class="poke-id"># ${id}</p>
-<p class="poke-weight">${weigth} kg</p>
+<p class="poke-weight">${weight} kg</p>
 <p class="poke-type">Type : ${type}</p>`;
 
   pokeContainer.appendChild(pokemonEl);
